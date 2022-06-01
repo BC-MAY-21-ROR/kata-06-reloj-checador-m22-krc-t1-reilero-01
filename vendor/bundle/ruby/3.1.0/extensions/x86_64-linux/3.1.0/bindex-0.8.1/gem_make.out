@@ -1,0 +1,15 @@
+current directory: /home/efpl/Documents/BrightCoders/kata-06/kata-06-reloj-checador-m22-krc-t1-reilero-01/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/home/efpl/.rbenv/versions/3.1.2/bin/ruby -I /home/efpl/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220531-156008-ox61cn.rb extconf.rb
+creating Makefile
+
+current directory: /home/efpl/Documents/BrightCoders/kata-06/kata-06-reloj-checador-m22-krc-t1-reilero-01/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /home/efpl/Documents/BrightCoders/kata-06/kata-06-reloj-checador-m22-krc-t1-reilero-01/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/efpl/Documents/BrightCoders/kata-06/kata-06-reloj-checador-m22-krc-t1-reilero-01/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20220531-156008-8tc95o/skiptrace/internal
