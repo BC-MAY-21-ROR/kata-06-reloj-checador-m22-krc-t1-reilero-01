@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kata06RelojChecadorM22KrcT1Reilero01</title>
+    <title>ClockTimer ⏰</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,42 @@
   </head>
 
   <body>
+  <header>
+    <div>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
+    <nav>
+      <% if employee_signed_in? %>
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li>
+
+            <%= button_to(
+              "Log Out",
+              destroy_employee_session_path,
+              method: :delete
+            ) %>
+          </li>
+
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Login", new_employee_session_path %></li>
+          <li><%= link_to "Signup", new_employee_registration_path %></li>
+        </ul>
+      <% end %>
+    </nav>
+  </header>
+
     <%= yield %>
+    
+
+
   </body>
 </html>
