@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   root 'home#index'
   devise_for :admins
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :dashboard
   get '/dashboard' => "dashboard#index", :as => :dashboard_root
-  # Defines the root path route ("/")
+  get '/employee_create' => "dashboard#new"
+  post '/employee_create' => "dashboard#create"
+  get '/employee_edit/:id' => "dashboard#edit"
+  post '/employee_edit/:id' => "dashboard#update"
+  get '/employee_show/:id' => "dashboard#show"
+
   # root "articles#index"
 end

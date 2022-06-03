@@ -1,2 +1,28 @@
 <h1>Vista Dashboard para el administrador</h1>
 <p>Find me in app/views/dashboard/index.html.erb</p>
+  <div>
+    <%= link_to 'Create Employee', employee_create_path %>
+  </div>
+  <table>
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Position</th>
+        <th>P. Number</th>
+        <th>Store</th>
+        <th>Edit</th>
+    </thead>
+    <tbody>
+      <% @employees.each do |e| %>
+        <tr>
+          <td><%=link_to e.name, dashboard_path(e) %></td>
+          <td> <%= e.email %></td>
+          <td><%= e.position %></td>
+          <td>  <%= e.private_number %></td>
+          <td> <%= e.store_id %></td>
+          <td> <%= link_to 'Edit', edit_dashboard_path(e) %></td>
+        <tr>
+      <% end %>
+    </tbody>
+  </th>
+</table>
