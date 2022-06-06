@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    @employees = Employee.all
+    @employees = Employee.all.order(:id)
   end
 
   def show
@@ -18,7 +18,7 @@ class DashboardController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
     if @employee.update(employee_params)
-      redirect_to @employee
+      redirect_to dashboard_index_path
     else
       render 'edit'
     end
