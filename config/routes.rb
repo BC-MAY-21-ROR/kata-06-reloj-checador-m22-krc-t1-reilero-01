@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get '/employee_show/:id' => "dashboard#show"
 
   #store routes
-  get '/stores' => "store#index"
-  
+  resources :stores
+   
   # root "articles#index"
 end
  #git branch -m old new

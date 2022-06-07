@@ -1,4 +1,4 @@
-class StoreController < ApplicationController
+class StoresController < ApplicationController
     def index
         @stores = Store.all
     end
@@ -34,6 +34,6 @@ class StoreController < ApplicationController
     end
 
     def store_params
-        params.permit(:id, :name, :address)
+        params.require(:store).permit(:name, :address)
     end
 end
