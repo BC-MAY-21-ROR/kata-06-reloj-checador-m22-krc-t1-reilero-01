@@ -20,5 +20,15 @@
 @import "layouts/navbar";
 @import "layouts/employeeform";
 
+// Utilites
+@import "utilities/align_and_justify";
+@import "utilities/display";
+@import "utilities/spacing";
+@import "utilities/flex_direction";
+@import "utilities/text_align";
+
+// Pages
+@import "pages/home_index";
+
 
 

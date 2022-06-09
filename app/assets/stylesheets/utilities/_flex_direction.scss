@@ -1,0 +1,7 @@
+$textAlignments: ("row", "row-reverse", "column", "column-reverse");
+
+@each $textAlign in $textAlignments {
+  .fd-#{$textAlign} {
+    flex-direction: #{$textAlign};
+  }
+}
