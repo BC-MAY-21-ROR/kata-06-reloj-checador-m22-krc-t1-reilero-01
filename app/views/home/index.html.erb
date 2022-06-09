@@ -1,10 +1,29 @@
-<h1>Vista general de la aplicacion</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container-home">
+  <%= render 'navbar' %>
 
+  <div class="container">
+  <div class="container__number">
+    <span class="number-clock" id="hour"></span> 
+    <p>hours</p>
+  </div>
+  <span class="number-colon">:</span>
+  <div class="container__number">
+    <span class="number-clock" id="minutes"></span>
+    <p>minutes</p>
+  </div>
+  <span class="number-colon">:</span>
+  <div class="container__number">
+    <span class="number-clock" id="seconds"></span>
+    <p>seconds</p>
+   </div>
+  </div>
 
+  <%= form_with model: @employee do |f| %>
+      <div class="d-flex fd-column form_private_number mx-auto px-1 mt-5">
+      <i class="fa fa-key icon"></i>
+        <%= f.text_field :private_number, class: "around mb-1 input-form-home", placeholder: "Private Number" %>
+        <%= f.submit "check", class: "around submit-form-home" %>
+      </div>
+  <% end %>
 
-<div class="container">
-  <span id="hour"></span> :
-  <span id="minutes"></span> :
-  <span id="seconds"></span>
 </div>
