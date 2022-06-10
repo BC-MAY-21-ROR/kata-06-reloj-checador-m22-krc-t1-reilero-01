@@ -1,0 +1,12 @@
+.alert{
+  background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: #F7971E;  /* fallback for old browsers */
+  background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--color-white);
+  font-family: var(--font-family-share-tech);
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+ 
+}

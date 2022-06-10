@@ -4,9 +4,10 @@ class CreateEmployees < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :email
       t.string :position
-      t.integer :private_number
+      t.integer :private_number, unique: true
 
       t.timestamps
     end
+    add_index :employees, :private_number, unique: true
   end
 end
