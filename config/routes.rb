@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   #store routes
   resources :stores
+
+  post "parse_input" => "home#parse_input"
+
    
   # root "articles#index"
 end
