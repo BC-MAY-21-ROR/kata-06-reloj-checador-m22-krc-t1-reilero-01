@@ -1,5 +1,16 @@
-<h1>Vista Dashboard para el administrador</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<header class="header">
+        <div class="navbar">
+            <div class="box1">
+                <div class="imagebox">
+                    <%= image_tag image_url('hamburguer.svg')%>
+                </div>
+            </div>
+            <div class="profilebox">
+                <%= image_tag 'admin_profile.png', class:"profile"%>
+                <%= image_tag 'vector 1.svg',class:"vec" %>
+            </div>
+        </div>
+    </header>
   <div>
     <%= link_to "Timer", root_path,class: "mr-2" %>
     <%= link_to 'Create Employee', employee_create_path %>
