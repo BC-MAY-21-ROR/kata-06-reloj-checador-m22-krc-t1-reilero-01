@@ -1,12 +1,9 @@
 // app/assets/stylesheets/application.sass.scss
-
 // Mixins
 @import "mixins/media";
-
 // Configuration
 @import "config/variables";
 @import "config/reset";
-
 // Components
 @import "components/btn";
 @import "components/error_message";
@@ -14,7 +11,6 @@
 @import "components/visually_hidden";
 @import "components/quote";
 @import "components/flash";
-
 // Utilites
 @import "utilities/align_and_justify";
 @import "utilities/display";
@@ -22,17 +18,12 @@
 @import "utilities/flex_direction";
 @import "utilities/text_align";
 @import "utilities/utils";
-
 // Layouts
 @import "layouts/container";
 @import "layouts/header";
 @import "layouts/navbar";
 @import "layouts/employeeform";
 @import "layouts/flash_cards";
-
-
+@import "layouts/navbar_dashboard";
 // Pages
 @import "pages/home_index";
-
-
-
