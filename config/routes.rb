@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #store routes
   resources :stores
 
-  post "parse_input" => "home#parse_input"
+  post "private_number_input" => "home#private_number_input"
 
    
   # root "articles#index"
