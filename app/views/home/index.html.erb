@@ -1,9 +1,8 @@
 <div class="container-home">
   <%= render 'navbar' %>
-
   <div class="container">
     <div class="container__number">
-      <span class="number-clock" id="hour"></span> 
+      <span class="number-clock" id="hour"></span>
       <p>hours</p>
     </div>
     <span class="number-colon">:</span>
@@ -17,17 +16,14 @@
       <p>seconds</p>
     </div>
   </div>
-
-
-    <%= form_with url: "/private_number_input", method: :post do |form| %>
+  <%= form_with url: "/private_number_input", method: :post do |form| %>
     <div class="d-flex fd-column form_private_number mx-auto px-1 mt-5">
       <%= form.text_field(:private_number, class: "around mb-1 input-form-home", placeholder: "Private Number") %>
       <%= form.submit("check", class: "around submit-form-home cursor-pointer") %>
     </div>
-    <% end %>
-
-    <% flash.each do |type, employee| %>
-      <% if type == "employee"%>
+  <% end %>
+  <% flash.each do |type, employee| %>
+    <% if type == "employee"%>
       <div class="card-employee mx-auto mt-4 p-1">
         <div class="text-center">
           Employee Attendance
@@ -42,20 +38,19 @@
           Position: <%= employee[0]["position"]  %>
         </div>
         <div>
-            The store is: <%= Store.find(employee[0]["store_id"]).name  %>
+          The store is: <%= Store.find(employee[0]["store_id"]).name  %>
         </div>
         <div>
-            Checked in: <%= employee[1]["checked_in"].to_datetime.strftime("%m/%d/%Y at %I:%M:%S %p")   %>
+          Checked in: <%= employee[1]["checked_in"].to_datetime.strftime("%m/%d/%Y at %I:%M:%S %p")   %>
         </div>
         <div>
-          <% if employee[1]["checked_out"] %>           
+          <% if employee[1]["checked_out"] %>
             Checked out: <%= employee[1]["checked_out"].to_datetime.strftime("%m/%d/%Y at %I:%M:%S %p")  %>
           <% else %>
             Checked out: Not registered yet 
-          <% end %>  
+          <% end %>
         </div>
       </div>
-      <% end %>  
     <% end %>
-      
+  <% end %>
 </div>

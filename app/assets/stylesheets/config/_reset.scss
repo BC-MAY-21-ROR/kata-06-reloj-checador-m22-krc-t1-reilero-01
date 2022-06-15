@@ -10,19 +10,18 @@
 }
 
 html {
-  overflow-y: scroll;
+  font-size: 16px;
   height: 100%;
+  overflow-y: scroll;
 }
 
 body {
+  color: var(--color-text-body);
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-
-  background-color: var(--color-background);
-  color: var(--color-text-body);
-  line-height: var(--line-height-body);
   font-family: var(--font-family-sans);
+  line-height: var(--line-height-body);
+  min-height: 100%;
 }
 
 img,
@@ -69,7 +68,7 @@ a {
   color: var(--color-primary);
   text-decoration: none;
   transition: color 200ms;
-
+  
   &:hover,
   &:focus,
   &:active {

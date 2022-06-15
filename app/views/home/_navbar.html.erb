@@ -1,18 +1,18 @@
-  <header>
-        <nav class="nav-home px-3 pt-2 mb-6">
-          <div>
-            <%= link_to "Timer", root_path,class: "nav-home__logo mr-2" %>
-            <% if admin_signed_in? %>
-               <%= link_to "Dashboard", dashboard_index_path, method: :get, class:"nav-home__button" %>
-            <% end %>
-            
-          </div>
-          <div>
-            <% if admin_signed_in? %>
-              <%= button_to "Sign_Out", destroy_admin_session_path, method: :delete, class:"nav-home__button cursor-pointer" %>
-            <% else %>
-              <%= link_to "Admin Login", new_admin_session_path, method: :get, class:"nav-home__button" %>
-            <% end %>
-          </div>
-        </nav>
-  </header>
+  
+<header>
+  <nav class="nav-home px-3 pt-2 mb-6">
+    <div>
+      <%= link_to "Timer", root_path,class: "nav-home__logo mr-2" %>
+      <% if admin_signed_in? %>
+        <%= link_to "Dashboard", dashboard_index_path, method: :get, class:"nav-home__button" %>
+      <% end %>
+    </div>
+    <div>
+      <% if admin_signed_in? %>
+        <%= button_to "Sign_Out", destroy_admin_session_path, method: :delete, class:"nav-home__button cursor-pointer" %>
+      <% else %>
+        <%= link_to "Admin Login", new_admin_session_path, method: :get, class:"nav-home__button" %>
+      <% end %>
+    </div>
+  </nav>
+</header>

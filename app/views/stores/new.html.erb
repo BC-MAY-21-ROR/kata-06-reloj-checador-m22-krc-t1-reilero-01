@@ -1,17 +1,13 @@
 <%= form_with model: @store do |f| %>
-
   <div>
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "Store Name" %>
   </div>
-
   <div>
     <%= f.label :address %>
     <%= f.text_field :address, placeholder: "New Address 123" %>
   </div>
-
   <div>
     <%= f.submit "Create" %>
   </div>
-
 <% end %>
