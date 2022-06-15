@@ -1,36 +1,30 @@
-<body>
-<h2 class="title">Admin Login</h2>
-<section class="container_two">
-<p class="description">Please fill in your unique admin login details below<br></p>
+<div class="login_section">
+  <h2 class="title">Admin Login</h2>
+  <section class="container_two">
+    <p class="description">*Please fill in your unique admin login details below<br>
+    </p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field mail"><br>
+        <%= f.label :email, "Email address", class:"label_devise" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input_devise" %>
+      </div>
+      <div class="field pass"><br>
+        <%= f.label :password, "Password", class:"label_devise" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class:"input_devise" %>
+      </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+      <div class="links"><br>
+        <%= render "devise/shared/links" %>
+      </div>
+      <div class="login"><br>
+        <%= f.submit "Sign in", class:"button_login" %>
+      </div>
+    <% end %>
+  </section>
+</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field mail"><br>
-    <%= f.label :email, "Email address" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field pass"><br>
-    <%= f.label :password, "Password" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field remember">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="links"><br>
-  <%= render "devise/shared/links" %>
-  </div>
-
-  <div class="login"><br>
-    <%= f.submit "Sign in", class:"button_login" %>
-  </div>
-<% end %>
-
-</section>
-</body>
-<footer>
-</footer>
