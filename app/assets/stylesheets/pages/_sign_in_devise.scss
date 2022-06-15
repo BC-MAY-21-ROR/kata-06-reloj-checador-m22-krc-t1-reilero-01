@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+}
+
+.container_two{
+    margin-right: 327px;
+    margin-left: 327px;
+    margin-bottom: 210px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.title{
+    padding-top: 30px;
+    margin-bottom: 74px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    font-family: "Inter", sans-serif; 
+    text-align: center;
+}
+
+.description {
+    padding-top: 36px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.new_admin {
+    padding-left: 169px;
+    font-family: "Inter", sans-serif;
+}
+
+#admin_email {
+    width: 369px;
+    font-family: "Inter", sans-serif;
+}
+
+#admin_password {
+    width: 369px;
+    font-family: "Inter", sans-serif;
+}
+
+.login {
+    margin-bottom: 36px;
+}
+
+.button_login {
+    width: 369px;
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 0px;
+    border: none;
+}
+
+footer {
+    padding-top: 20px;
+}
