@@ -34,8 +34,13 @@
       <tbody>
         <% @employees.each do |e| %>
           <tr class="mt-1">
-            <td><%= e.id %></td>
-            <td><%=link_to e.name, dashboard_path(e) %></td>
+            <td>
+              <%= e.id %>
+            </td>
+            <td class="d-flex">
+              <img src=<%= e.avatar.url(:width=>32, :crop=>"fill") %> class="image-profile mr-1">
+              <%=link_to e.name.split.map(&:capitalize).join(" "), dashboard_path(e) %>
+            </td>
             <td><%= e.email %></td>
             <td><%= e.position %></td>
             <td><%= e.private_number %></td>
