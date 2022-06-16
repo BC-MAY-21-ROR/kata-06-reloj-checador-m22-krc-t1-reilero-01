@@ -36,6 +36,6 @@ class DashboardController < ApplicationController
   private
 
   def employee_params
-    params.permit(:name, :email, :position, :private_number, :store_id)
+    params.permit(:name, :email, :position, :private_number, :store_id, :avatar)
   end
 end

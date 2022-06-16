@@ -1,0 +1,18 @@
+development:
+  cloud_name: iseran
+  api_key: '451766951455719'
+  api_secret: "_ywJCZmjVSZRFI6n_29LUb_RLHE"
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: iseran
+  api_key: '451766951455719'
+  api_secret: "_ywJCZmjVSZRFI6n_29LUb_RLHE"
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: iseran
+  api_key: '451766951455719'
+  api_secret: "_ywJCZmjVSZRFI6n_29LUb_RLHE"
+  enhance_image_tag: true
+  static_file_support: false
