@@ -1,44 +1,36 @@
-body {
+.login_section {
+    position: relative;
     background-color: black;
+    height: 100vh;
 }
 
-.container_two{
-    margin-right: 327px;
-    margin-left: 327px;
+.container_two {
+    max-width: 500px;
+    margin: 0 auto;
     margin-bottom: 210px;
     background-color: white;
     border-radius: 6px;
 }
 
-.title{
-    padding-top: 30px;
+.title {
     margin-bottom: 74px;
     font-size: 28px;
     font-weight: bold;
     color: white;
-    margin-top: 20px;
-    font-family: "Inter", sans-serif; 
+    margin-top: 120px;
+    font-family: "Inter", sans-serif;
     text-align: center;
 }
 
 .description {
     padding-top: 36px;
     font-family: "Inter", sans-serif;
-    text-align: center;
+    padding-left: 16px;
+    font-size: 14px;
 }
 
 .new_admin {
-    padding-left: 169px;
-    font-family: "Inter", sans-serif;
-}
-
-#admin_email {
-    width: 369px;
-    font-family: "Inter", sans-serif;
-}
-
-#admin_password {
-    width: 369px;
+    padding-left: 16px;
     font-family: "Inter", sans-serif;
 }
 
@@ -47,15 +39,26 @@ body {
 }
 
 .button_login {
-    width: 369px;
+    width: 465px;
     font-family: "Inter", sans-serif;
     background-color: black;
     color: white;
     border-radius: 10px;
     padding: 10px 0px;
     border: none;
+    margin-bottom: 20px;
 }
 
-footer {
-    padding-top: 20px;
+.input_devise {
+    width: 440px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    border: none;
+}
+
+.label_devise {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 }
