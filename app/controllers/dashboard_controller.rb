@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def index
-    @employees = Employee.all.order(:id)
+    @employees = Employee.all.order(:id).page(params[:page] || 1)
   end
 
   def show

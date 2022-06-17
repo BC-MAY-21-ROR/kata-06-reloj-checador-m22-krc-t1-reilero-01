@@ -53,11 +53,25 @@
   line-height: 14px;
   padding: 0px;
   width: 380px;
-
-  p {
+  
+  a, span {
     color: #4c4c4c;
     font-size: 12px;
-    text-transform: capitalize;
+  }
+  .page{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .page, .current{
+    padding: 0px 3px 0 6px;
+    margin: 0 4px;
+  }
+
+  .current{
+    padding: 0px 6px 0 6px;
+
   }
 
   &__nums {
@@ -65,10 +79,7 @@
       margin: 0 4px;
 
       p {
-        background: #e6e6e6;
-        border-radius: 50%;
-        cursor: pointer;
-        padding: 3px 7px;
+        
       }
     }
   }
