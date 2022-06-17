@@ -1,20 +1,43 @@
 <header class="header">
-  <div class="navbar">
-    <div class="box1">
-      <div class="imagebox">
-        <%= image_tag image_url('hamburguer.svg')%>
-      </div>
-    </div>
-    <div class="profilebox">
-      <%= image_tag 'admin_profile.png', class:"profile"%>
-      <%= image_tag 'vector 1.svg',class:"vec" %>
-    </div>
-  </div>
+  <nav class="nav-main">
+            <!--boton-->
+            <input type="checkbox" class="nav-main__btn-collapse" id="nav-main__checkbox" />
+            <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+            </label>
+            
+            <!--menu-->
+            <div class="nav-main__btn-collapse-bg"></div>
+            <div class="nav-main__menu">
+              <a href="" class="link-item">
+                <%= button_to image_tag('TIMER.svg'), root_path, method: :get,class:"button-styles"%>
+              </a>
+              <a href="" class="link-item">
+                <p class="main_menu">Main Menu</p>
+              </a>
+              <a href="" class="link-item">
+                <%= image_tag 'dashboard.svg' %> Dashboard
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('employee.svg')+ "New_Employee", employee_create_path, method: :get,class:"button-styles"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('department.svg')+ "Stores", stores_path, method: :get,class:"button-styles"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('log_out.svg')+ "Log out", destroy_admin_session_path, method: :delete,class:"button-styles"%>
+              </a>
+            </div>
+            <!--foto de perfil-->
+            <div class="profilebox">
+              <a href="" class="profilebox__link-item">
+                <%= image_tag 'admin_profile.png', class:"profile"%>
+              </a>
+            </div>
+  </nav>
 </header>
-<div>
-  <%= link_to "Timer", root_path,class: "mr-2" %>
-  <%= link_to 'Create Employee', employee_create_path %>
-</div>
 <div class="px-1">
   <div class="all-employee">
     <h2 class="all-employee__title">All employees</h2>
