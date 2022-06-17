@@ -9,9 +9,9 @@
     </div>
     <div>
       <% if admin_signed_in? %>
-        <%= button_to "Sign_Out", destroy_admin_session_path, method: :delete, class:" py-0 nav-home__link cursor-pointer" %>
+        <%= button_to "Sign_Out", destroy_admin_session_path, method: :delete, class:" py-0 nav-home__button cursor-pointer" %>
       <% else %>
-        <%= link_to "Admin Login", new_admin_session_path, method: :get, class:"nav-home__button" %>
+        <%= link_to "Admin Login", new_admin_session_path, method: :get, class:"nav-home__link" %>
       <% end %>
     </div>
   </nav>
