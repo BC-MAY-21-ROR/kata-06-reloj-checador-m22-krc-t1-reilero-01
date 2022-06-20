@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   // Simple fonts
   --font-family-sans: "Poppins", sans-serif;
   --font-family-share-tech: 'Share Tech', sans-serif;
   --font-family-jaldi: 'Jaldi', sans-serif;
   --font-family-manrope: 'Manrope';
+  --font-family-roboto: 'Roboto';
 
   // Classical line heights
   --line-height-headers: 1.1;

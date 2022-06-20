@@ -1,5 +1,8 @@
 .all-employee {
   font-family: var(--font-family-manrope);
+  @media only screen and (max-width: 500px) {
+    min-width: 334px;
+  }
   &__title {
     color: var(--color-text-body);
     font-size: 18px;
@@ -35,6 +38,7 @@
         text-align: center;
         vertical-align: middle;
         align-items: center;
+
         a {
           color: hsla(0, 0%, 50%, 1);
           font-size: 12px;
@@ -53,25 +57,26 @@
   line-height: 14px;
   padding: 0px;
   width: 380px;
-  
-  a, span {
-    color: #4c4c4c;
+
+  a,
+  span {
+    color: #9e9898;
     font-size: 12px;
-  }
-  .page{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  .page, .current{
-    padding: 0px 3px 0 6px;
-    margin: 0 4px;
+    margin: 0 5px;
   }
 
-  .current{
+  .page {
+    a {
+      padding: 0px 3px 0 6px;
+      margin: 0 4px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .current {
     padding: 0px 6px 0 6px;
-
+    color: green;
   }
 
   &__nums {
@@ -79,7 +84,6 @@
       margin: 0 4px;
 
       p {
-        
       }
     }
   }
@@ -94,7 +98,7 @@
   background: #fafafa;
   background-image: url("search_icon.svg");
   background-repeat: no-repeat;
-  background-position: 15px 7px;
+  background-position: 13px 9px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   font-size: 12px;
@@ -119,4 +123,130 @@
   border: 3px solid #ececec;
   border-radius: 50px;
   object-fit: cover;
+}
+
+.btn-danger {
+  color: #ec2f2f;
+  padding: 0 4px;
+  height: 24px;
+  background: #fdcece;
+  border-radius: 4px;
+  font-size: 12px;
+  border: none;
+}
+
+.btn-success {
+  color: hsla(147, 30%, 37%, 1);
+  padding: 0 4px;
+  height: 24px;
+  background: #deede5;
+  border-radius: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  border: none;
+}
+
+.link-edit {
+  color: #938406 !important;
+  padding: 2px 4px;
+  height: 24px;
+  background: #fdf8ce;
+  border-radius: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  border: none;
+}
+
+.cards-report {
+  @media only screen and (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-report-style {
+    padding: 16px 20px;
+    width: 350px;
+    height: 140px;
+    border-radius: 10px;
+    .active {
+      color: #ff5151;
+    }
+
+    .absent {
+      color: #3786f1;
+    }
+
+    .darys {
+      color: #ee61cf;
+    }
+  }
+
+  &__attended-by-day {
+    background: #ffefe7;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: 600px) {
+      margin-right: 1rem;
+    }
+
+    &--title {
+      font-family: var(--font-family-sans);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: hsla(232, 58%, 21%, 1);
+    }
+
+    &--num-day {
+      font-weight: 500;
+      font-size: 32px;
+      color: hsla(232, 58%, 21%, 1);
+    }
+
+    &--style {
+      font-family: var(--font-family-roboto);
+      font-size: 14px;
+    }
+  }
+
+  &__average-by-month {
+    background: #ffefe7;
+    padding: 12px 20px;
+    width: 350px;
+    height: 140px;
+    border-radius: 10px;
+    background: #e8f0fb;
+
+    margin-bottom: 1rem;
+
+    @media only screen and (min-width: 600px) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__absence-by-month {
+    background: #ffefe7;
+    padding: 12px 20px;
+    width: 350px;
+    height: 140px;
+    border-radius: 10px;
+    background: #fdebf9;
+
+    margin-bottom: 1rem;
+  }
+}
+
+.content-dashboard {
+  margin-left: 13px;
+  margin-right: 13px;
+  h2 {
+    font-family: var(--font-family-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 42px;
+    color: hsla(232, 58%, 21%, 1);
+  }
 }

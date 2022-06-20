@@ -17,14 +17,13 @@ class HomeController < ApplicationController
        else
         redirect_to root_path, alert: "For today the private number is already used"
        end
-      # flash[:employee] = [find_employee, Attendance.where(employee_id: find_employee[:id]).last]
     else
-      redirect_to root_path, alert: "Invalid private number"
+      redirect_to root_path, alert: "Invalid private number or employee is inoperative"
     end
   end
   
   def find_private_number_to_employee(private_number)
-    Employee.find_by(private_number: private_number)
+    Employee.find_by(private_number: private_number, operative: true)
   end
   
   def attendance_create(find_employee)
