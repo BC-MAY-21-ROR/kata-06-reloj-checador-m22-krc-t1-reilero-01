@@ -1,0 +1,37 @@
+<header class="header">
+  <nav class="nav-main">
+            <!--boton-->
+            <input type="checkbox" class="nav-main__btn-collapse" id="nav-main__checkbox" />
+            <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+            </label>
+            
+            <!--menu-->
+            <div class="nav-main__btn-collapse-bg"></div>
+            <div class="nav-main__menu">
+              <a href="" class="link-item">
+                <%= button_to image_tag('TIMER.svg'), root_path, method: :get,class:"button-styles", class:"cursor-pointer"%>
+              </a>
+              <a href="" class="link-item d-flex">
+                <%= image_tag 'dashboard.svg' %> Dashboard
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('employee.svg')+ "New Employee", employee_create_path, method: :get,class:"button-styles cursor-pointer d-flex gap-1 justify-space-between"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('department.svg')+ "Stores", stores_path, method: :get,class:"button-styles cursor-pointer d-flex justify-space-between"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('log_out.svg')+ "Log out", destroy_admin_session_path, method: :delete,class:"button-styles cursor-pointer d-flex"%>
+              </a>
+            </div>
+            <!--foto de perfil-->
+            <div class="profilebox">
+              <a href="" class="profilebox__link-item">
+                <%= image_tag 'admin_profile.png', class:"profile"%>
+              </a>
+            </div>
+  </nav>
+</header>
