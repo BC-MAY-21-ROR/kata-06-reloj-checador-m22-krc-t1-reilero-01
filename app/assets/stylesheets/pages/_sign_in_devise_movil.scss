@@ -1,19 +1,18 @@
-@media (min-width: 376px){
-
+@media (max-width: 480px){
     .login_section {
         position: relative;
         background-color: black;
         height: auto;
     }
-
+    
     .container_two {
-        max-width: 500px;
+        max-width: 300px;
         margin: 0 auto;
         margin-bottom: 110px;
         background-color: white;
         border-radius: 6px;
     }
-
+    
     .title {
         margin-bottom: 54px;
         font-size: 28px;
@@ -23,25 +22,27 @@
         font-family: "Inter", sans-serif;
         text-align: center;
     }
-
+    
     .description {
         padding-top: 36px;
         font-family: "Inter", sans-serif;
-        padding-left: 16px;
-        font-size: 14px;
+        text-align: center;
+        padding-right: 14px;
+        padding-left: 14px;
+        font-size: 12px;
     }
-
+    
     .new_admin {
         padding-left: 16px;
         font-family: "Inter", sans-serif;
     }
-
+    
     .login {
         margin-bottom: 36px;
     }
-
+    
     .button_login {
-        width: 465px;
+        width: 269px;
         font-family: "Inter", sans-serif;
         background-color: black;
         color: white;
@@ -50,14 +51,14 @@
         border: none;
         margin-bottom: 20px;
     }
-
+    
     .input_devise {
-        width: 440px;
+        width: 269px;
         background: #f5f5f5;
         border-radius: 10px;
         border: none;
     }
-
+    
     .label_devise {
         font-family: "Inter";
         font-style: normal;
