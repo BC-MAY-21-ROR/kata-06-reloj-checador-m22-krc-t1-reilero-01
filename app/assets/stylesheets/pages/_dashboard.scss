@@ -1,8 +1,10 @@
 .all-employee {
   font-family: var(--font-family-manrope);
+
   @media only screen and (max-width: 500px) {
     min-width: 334px;
   }
+
   &__title {
     color: var(--color-text-body);
     font-size: 18px;
@@ -18,7 +20,7 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-
+    font-size: 12px;
     thead th {
       color: hsla(0, 0%, 30%, 1);
       font-size: 12px;
@@ -29,6 +31,7 @@
 
     tbody tr {
       border-bottom: 1pt solid #f2f2f2;
+      font-family: var(--font-family-manrope);
 
       td {
         color: hsla(0, 0%, 50%, 1);
@@ -41,7 +44,10 @@
 
         a {
           color: hsla(0, 0%, 50%, 1);
-          font-size: 12px;
+
+          font-style: normal;
+          font-weight: 300;
+          font-size: 12px !important;
           line-height: 16px;
         }
       }
@@ -83,8 +89,7 @@
     div {
       margin: 0 4px;
 
-      p {
-      }
+      p {}
     }
   }
 }
@@ -92,6 +97,22 @@
 .constrain {
   max-width: 240px;
 }
+
+.input-simple-reports{
+  margin-left: 20px;
+  background-size: 20px 20px;
+  background: #fafafa;
+  background-image: url("search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 7px;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 0.5em 2em 0.5em 4em;
+  width: 150px;
+}
+
 
 .input-simple {
   background-size: 20px 20px;
@@ -168,6 +189,7 @@
     width: 350px;
     height: 140px;
     border-radius: 10px;
+
     .active {
       color: #ff5151;
     }
@@ -194,7 +216,7 @@
       font-family: var(--font-family-sans);
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 24px;
       color: hsla(232, 58%, 21%, 1);
     }
@@ -203,11 +225,13 @@
       font-weight: 500;
       font-size: 32px;
       color: hsla(232, 58%, 21%, 1);
+      text-align: center;
     }
 
     &--style {
       font-family: var(--font-family-roboto);
-      font-size: 14px;
+      font-size: 12px;
+      text-align: center;
     }
   }
 
@@ -241,6 +265,7 @@
 .content-dashboard {
   margin-left: 13px;
   margin-right: 13px;
+
   h2 {
     font-family: var(--font-family-poppins);
     font-style: normal;

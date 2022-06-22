@@ -5,30 +5,47 @@
 
   <div class="cards-report">
     <div class="cards-report__attended-by-day card-report-style d-flex fd-column justify-space-between ">
-      <div class="cards-report__attended-by-day--title ">Attended by day</div>
-      <%= form_with(url: dashboard_index_path, method: :get) do |form|  %>
-        <%= form.date_field :date_day, class:"input-simple", data: {action: "input=>search-form#search"}  %>
-        <%= form.submit %> 
-      <% end  %>
+      <div class="d-flex">
+        <div class="cards-report__attended-by-day--title ">Attendances by day :</div>
+        <%= form_with url: dashboard_root_path, method: :get, data: {controller: "debounce", debounce_target: "form" } do |form|  %>
+          <%= form.date_field :date_day, class:"input-simple-reports", data: { action: "input->debounce#search" }  %>
+        <% end  %>
+      </div>
       <div class="cards-report__attended-by-day--num-day">
        <% if @attendances_day %>   
-         <%= @attendances_day.count %>
+         <%= @attendances_day %>
        <% else %>
          0
        <% end %>
         
       </div>
-      <div class="cards-report__attended-by-day--style active ">4 Active employees</div>
+      <div class="cards-report__attended-by-day--style active ">Attendances</div>
     </div>
     <div class="cards-report__average-by-month card-report-style d-flex fd-column justify-space-between">
-     <div class="cards-report__attended-by-day--title ">Absence by day</div>
-      <div class="cards-report__attended-by-day--num-day ">24</div>
-      <div class="cards-report__attended-by-day--style absent">4 Absent employees</div>
+    <div class="d-flex">
+     <div class="cards-report__attended-by-day--title ">Absences by month :</div>
+        <%= form_with url: dashboard_root_path, method: :get, data: {controller: "debounce", debounce_target: "form" } do |form|  %>
+          <%= form.month_field :absence_month, class:"input-simple-reports", data: { action: "input->debounce#search" }  %>
+        <% end  %>
+    </div>
+      <div class="cards-report__attended-by-day--num-day ">
+      <% if @absence_by_month  %>
+        <%= @absence_by_month %>
+      <% else %>
+        0
+      <% end %>
+      </div>
+      <div class="cards-report__attended-by-day--style absent">Absences</div>
     </div>
     <div class="cards-report__absence-by-month card-report-style d-flex fd-column justify-space-between">
-     <div class="cards-report__attended-by-day--title ">Attended by day</div>
+      <div class="d-flex">
+     <div class="cards-report__attended-by-day--title ">Avg. attendances by month :</div>
+     <%= form_with url: dashboard_root_path, method: :get, data: {controller: "debounce", debounce_target: "form" } do |form|  %>
+          <%= form.month_field :avg_month, class:"input-simple-reports", data: { action: "input->debounce#search" }  %>
+        <% end  %>
+        </div>
       <div class="cards-report__attended-by-day--num-day ">24</div>
-      <div class="cards-report__attended-by-day--style darys">Darys worked / Month days</div>
+      <div class="cards-report__attended-by-day--style darys">Days worked / Month days</div>
     </div>
   </div>
 
@@ -42,6 +59,7 @@
  
     </div>
 
+      
     <table class="all-employee__table">
       <thead>
         <th>Id</th>
@@ -53,34 +71,35 @@
         <th colspan="2">Options</th>
       </thead>
       <tbody>
-        <% @employees.each do |e| %>
+        <% @employees.each do |employee| %>
           <tr class="mt-1">
             <td>
-              <%= e.id %>
+              <%= employee.id %>
             </td>
             <td class="d-flex">
-              <img src=<%= e.avatar.url(:width=>32, :crop=>"fill") %> class="image-profile mr-1">
-              <%=link_to e.name.split.map(&:capitalize).join(" "), dashboard_path(e) %>
+              <img src=<%= employee.avatar.url(:width=>32, :crop=>"fill") %> class="image-profile mr-1">
+              <%=link_to employee.name.split.map(&:capitalize).join(" "), dashboard_employee_path(employee) %>
             </td>
-            <td><%= e.email %></td>
-            <td><%= e.position %></td>
-            <td><%= e.private_number %></td>
-            <td><%= e.store.name %></td>
-            <td><%= link_to 'Edit', edit_dashboard_path(e), class:"link-edit" %></td>
+            <td><%= employee.email %></td>
+            <td><%= employee.position %></td>
+            <td><%= employee.private_number %></td>
+            
+            <td><%= employee.store.name %></td>
+            <td><%= link_to 'Edit', edit_dashboard_employee_path(employee), class:"link-edit" %></td>
             <td>
-              <% if e.operative %>
-                <%= button_to 'Deactive', dashboard_delete_path(e), method: :delete,  class: "btn-danger cursor-pointer" %>
+              <% if employee.operative %>
+                <%= button_to 'Deactive', employee_path(employee), method: :delete,  class: "btn-danger cursor-pointer" %>
               <% else %>
-                <%= button_to 'Active', dashboard_delete_path(e), method: :delete, class: "btn-success cursor-pointer" %>
+                <%= button_to 'Active', employee_path(employee), method: :delete, class: "btn-success cursor-pointer" %>
               <% end %>
            </td>
             </tr>
             <% end %>
           </tbody>
         </table>
-      </div>
       <div class="d-flex fd-row justify-space-between mx-auto mt-2">
         <%= paginate @employees %>
       </div>
+      </div>
+
       
-      <%= Time.zone.now %>
