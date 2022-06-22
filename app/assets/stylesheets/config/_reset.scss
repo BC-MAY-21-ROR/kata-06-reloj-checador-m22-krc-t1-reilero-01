@@ -17,7 +17,7 @@ html {
 
 body {
   color: var(--color-text-body);
-  display: flex;
+  display: grid;
   flex-direction: column;
   font-family: var(--font-family-sans);
   line-height: var(--line-height-body);
