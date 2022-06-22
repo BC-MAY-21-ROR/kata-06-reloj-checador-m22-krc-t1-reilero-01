@@ -12,10 +12,10 @@
             <div class="nav-main__btn-collapse-bg"></div>
             <div class="nav-main__menu">
               <a href="" class="link-item">
-                <%= button_to image_tag('TIMER.svg'), root_path, method: :get,class:"button-styles", class:"cursor-pointer"%>
+                <%= button_to image_tag('TIMER.svg'), root_path, method: :get,class:"button-styles cursor-pointer"%>
               </a>
               <a href="" class="link-item d-flex">
-                <%= image_tag 'dashboard.svg' %> Dashboard
+                <%= button_to image_tag('dashboard.svg')+ "Dashboard", root_path, method: :get,class:"buttonselected cursor-pointer d-flex gap-1 justify-space-between"%>
               </a>
               <a href="" class="link-item">
                 <%= button_to image_tag('employee.svg')+ "New Employee", new_dashboard_employee_path	, method: :get,class:"button-styles cursor-pointer d-flex gap-1 justify-space-between"%>
@@ -26,6 +26,12 @@
               <a href="" class="link-item">
                 <%= button_to image_tag('log_out.svg')+ "Log out", destroy_admin_session_path, method: :delete,class:"button-styles cursor-pointer d-flex"%>
               </a>
+              <div class="footer_desk__link-item">
+                <%= image_tag 'credits.svg', class:"footer_desk"%>
+              </div>
+              <div class="footer_desk__link-item">
+                <%= image_tag 'BC.svg', class:"footer_desk"%>
+              </div>
             </div>
             <!--foto de perfil-->
             <div class="profilebox">

@@ -1,41 +1,41 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  font-size: 16px;
-  height: 100%;
-  overflow-y: scroll;
+    font-size: 16px;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 body {
-  color: var(--color-text-body);
-  display: grid;
-  flex-direction: column;
-  font-family: var(--font-family-sans);
-  line-height: var(--line-height-body);
-  min-height: 100%;
+    color: var(--color-text-body);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-sans);
+    line-height: var(--line-height-body);
+    min-height: 100%;
 }
 
 img,
 picture,
 svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 h1,
@@ -44,34 +44,33 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text-header);
-  line-height: var(--line-height-headers);
+    color: var(--color-text-header);
+    line-height: var(--line-height-headers);
 }
 
 h1 {
-  font-size: var(--font-size-xxxl);
+    font-size: var(--font-size-xxxl);
 }
 
 h2 {
-  font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xxl);
 }
 
 h3 {
-  font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl);
 }
 
 h4 {
-  font-size: var(--font-size-l);
+    font-size: var(--font-size-l);
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 200ms;
-  
-  &:hover,
-  &:focus,
-  &:active {
-    color: var(--color-primary-rotate);
-  }
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 200ms;
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--color-primary-rotate);
+    }
 }
