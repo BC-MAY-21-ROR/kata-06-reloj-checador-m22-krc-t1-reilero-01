@@ -35,7 +35,7 @@ Employee.delete_all
         filename: "profile#{count}.jpg")
         count += 1
         10.times do
-           date = Faker::Time.between(from: 10.years.ago, to: DateTime.now)
+           date = Faker::Time.between(from: 2.years.ago, to: DateTime.now)
             Attendance.create!(
               checked_in: date,
               checked_out: date + rand(15..500).minutes,
