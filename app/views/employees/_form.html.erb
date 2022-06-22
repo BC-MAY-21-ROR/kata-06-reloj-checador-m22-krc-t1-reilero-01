@@ -6,7 +6,7 @@
     </div>
     <div class="content-main">
       <div class="content-form">
-        <%= form_with(url: url) do |f| %>
+        <%= form_with(model: employee) do |f| %>
           <div>
             <%= f.label "Email*", class: "title" %>
             <br />
@@ -40,7 +40,7 @@
           <div class="button-group">
             <div>
               <%= f.submit "Create", class:"button" %>
-              <%= link_to "<- Return", dashboard_index_path, class:"link" %>
+              <%= link_to "<- Return", dashboard_root_path, class:"link" %>
             </div>
           </div>
         <% end %>

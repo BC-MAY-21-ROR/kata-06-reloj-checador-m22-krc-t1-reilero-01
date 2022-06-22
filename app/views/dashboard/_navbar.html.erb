@@ -18,10 +18,10 @@
                 <%= image_tag 'dashboard.svg' %> Dashboard
               </a>
               <a href="" class="link-item">
-                <%= button_to image_tag('employee.svg')+ "New Employee", employee_create_path, method: :get,class:"button-styles cursor-pointer d-flex gap-1 justify-space-between"%>
+                <%= button_to image_tag('employee.svg')+ "New Employee", new_dashboard_employee_path	, method: :get,class:"button-styles cursor-pointer d-flex gap-1 justify-space-between"%>
               </a>
               <a href="" class="link-item">
-                <%= button_to image_tag('department.svg')+ "Stores", stores_path, method: :get,class:"button-styles cursor-pointer d-flex justify-space-between"%>
+                <%= button_to image_tag('department.svg')+ "Stores", new_dashboard_store_path	, method: :get,class:"button-styles cursor-pointer d-flex justify-space-between"%>
               </a>
               <a href="" class="link-item">
                 <%= button_to image_tag('log_out.svg')+ "Log out", destroy_admin_session_path, method: :delete,class:"button-styles cursor-pointer d-flex"%>

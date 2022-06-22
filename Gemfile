@@ -46,6 +46,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+gem 'devise'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -61,28 +62,26 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  gem 'rubocop' 
   gem 'rubycritic' 
   gem 'sandi_meter' 
-  gem 'rspec'
-  gem 'devise'
   gem 'cloudinary', '~> 1.2', '>= 1.2.2'
   gem 'ffi'
   
 end
 
 group :test do
+  gem 'rspec'
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "hotwire-rails", "~> 0.1.3"
 
 gem 'kaminari'
 

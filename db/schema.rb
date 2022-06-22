@@ -71,9 +71,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_17_054648) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "store_id", null: false
-    t.datetime "deleted_at"
     t.boolean "operative", default: true
-    t.index ["deleted_at"], name: "index_employees_on_deleted_at"
+    t.index ["private_number"], name: "index_employees_on_private_number", unique: true
     t.index ["store_id"], name: "index_employees_on_store_id"
   end
 
