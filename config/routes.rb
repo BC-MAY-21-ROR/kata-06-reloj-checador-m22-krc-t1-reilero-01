@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get '/dashboard' => "dashboard#index", :as => :dashboard_root
+  
   devise_for :admins
 
   resource :dashboard, only: [:index] do 
@@ -7,8 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :employees
+  resources :stores
   
-  get '/dashboard' => "dashboard#index", :as => :dashboard_root
 
   post "private_number_input" => "home#private_number_input"
 
