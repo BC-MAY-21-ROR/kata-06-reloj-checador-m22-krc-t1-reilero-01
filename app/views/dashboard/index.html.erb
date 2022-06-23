@@ -1,8 +1,8 @@
 <%= render 'navbar' %>
 
 <div class="content-dashboard">
-  <h2 class="pt-2 mb-2">Dashboard</h2>
-  <h3 class="mb-2"> Reports general </h3>
+  <p class="mb-2 title-dashboard">Dashboard</p>
+  <p class="mb-2 title-reports-general"> Reports general </p>
   <div class="cards-report">
     <div class="cards-report__attended-by-day card-report-style d-flex fd-column justify-space-between ">
       <div class="d-flex">
@@ -74,7 +74,7 @@
         <% @employees.each do |employee| %>
           <tr class="mt-1">
             <td>
-              <%= employee.id %>
+              <%# <%= employee.id %>
             </td>
             <td class="d-flex">
               <img src=<%= employee.avatar.url(:width=>32, :crop=>"fill") %> class="image-profile mr-1">
