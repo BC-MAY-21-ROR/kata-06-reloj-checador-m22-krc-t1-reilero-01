@@ -23,7 +23,7 @@
     }
     .profilebox__link-item {
         margin: 0 1rem;
-        img{
+        img {
             margin-top: 1rem;
             margin-left: 5rem;
         }
@@ -63,7 +63,7 @@
         top: 100%;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 120.5vh;
         padding: 2rem;
         font-weight: 300;
         box-shadow: var(--box-shadow);
@@ -71,6 +71,7 @@
         transform: scaleY(1);
         transform-origin: top;
         border-right: 2px solid #ededed;
+        border-bottom: 2px solid #ededed;
         margin-bottom: 2px solid #ededed;
     }
     .link-item {
@@ -87,18 +88,15 @@
         font-size: 16px;
         font-size: var(--font-family-poppins);
     }
-
-    .link-title{
+    .link-title {
         text-transform: uppercase;
         color: black;
         font-weight: 600;
         font-size: 20px;
-    }   
-
-    .timer-link{
-        width:100px
     }
-
+    .timer-link {
+        width: 100px
+    }
     .buttonselected {
         font-weight: 400;
         color: #FF5151;
@@ -118,21 +116,54 @@
             margin: auto;
         }
     }
-    .footer_desk__link-item--credits{
+    .footer_desk__link-item--credits {
+        margin-bottom: 8rem;
         display: flex;
         flex-direction: column;
         color: rgb(141, 138, 138);
         font-size: 12px;
         font-family: var(--font-family-poppins);
         font-weight: 400;
-        div{
-            p{
-
+        div {
+            p {}
+        }
+    }
+    .footer {
+        display: none;
+    }
+    .container-d {
+        letter-spacing: 0.3px;
+        top: 2rem;
+        position: absolute;
+        padding-left: 64rem;
+        display: flex;
+        justify-content: center;
+        color: rgb(5, 5, 5);
+        &__numberd {
+            background: #fff;
+            margin-right: 15px;
+            font-family: var(--font-family-share-tech);
+            .number-clock-d {
+                font-size: 20px;
+            }
+            .number-date-d {
+                font-size: 20px;
+                padding-left: 5rem;
             }
         }
     }
-
-    .footer{
-        display: none;
+    .number-colon-d {
+        margin-right: 15px;
+        font-size: 10px;
+        top: 5px;
+        position: relative;
+    }
+    .clock {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        border-right: #ffffff;
+        border-bottom: #ffffff;
+        height: 26px;
+        width: 20px;
     }
 }

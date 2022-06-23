@@ -1,4 +1,28 @@
 <%= render 'navbar' %>
+<div class="container-d">
+    <div class="container-d__numberd">
+      <%= button_to image_tag('clock.svg'), root_path, method: :get,class:"clock"%>
+    </div>
+    <div class="container-d__numberd">
+      <span class="number-clock-d" id="hour"></span>
+    </div>
+    
+    <span class="number-colon-d">:</span>
+    <div class="container-d__numberd">
+      <span class="number-clock-d" id="minutes"></span>
+    </div>
+    <span class="number-colon-d">:</span>
+    <div class="container-d__numberd">
+
+      <span class="number-clock-d" id="seconds"></span>    
+    </div>
+    <div class="container-d__numberd">
+      <div class="number-date-d">
+        <%= Time.now.strftime("%Y/%m/%d")%>
+      </div>    
+    </div>
+    
+  </div>
 
 <div class="content-dashboard">
   <p class="mb-2 title-dashboard">Dashboard</p>
