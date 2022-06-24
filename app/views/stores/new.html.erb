@@ -1,13 +1,20 @@
 <%= form_with model: @store do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "Store Name" %>
-  </div>
-  <div>
-    <%= f.label :address %>
-    <%= f.text_field :address, placeholder: "New Address 123" %>
-  </div>
-  <div>
-    <%= f.submit "Create" %>
+  <div class="container_1">  
+    <div>
+      <h2 class="title_store">Create new store</h2>
+      <p class="description_store">Fill in the blanks with the requested information</p>
+      <%= f.label :name, "Store name" %><br>
+      <%= f.text_field :name, placeholder: "Store Name" %>
+    </div>
+    <div class="address_cont">
+      <%= f.label :address, "Address" %><br>
+      <%= f.text_field :address, placeholder: "Address" %>
+    </div>
+    <div>
+      <%= f.submit "Create", class:"button_create" %>
+    </div>
+  </div>  
+  <div class="container_2">
+    <%= image_tag("background_store.jpg", :alt => "Stores_image", class:"img_1") %>
   </div>
 <% end %>

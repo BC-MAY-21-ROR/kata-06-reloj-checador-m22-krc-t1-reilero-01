@@ -1,0 +1,36 @@
+@media (min-width: 376px){
+    .container_1{
+        position: absolute;
+        padding-top: 202px;
+        padding-left: 100px;
+        align-self: center;
+    }
+
+    .description_store{
+        margin-bottom: 14px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .address_cont{
+        margin-top: 14px;
+    }
+
+    .button_create{
+        margin-top: 14px;
+        width: 316px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 0px;
+        border: none;
+        }
+
+    .container_2{
+        padding-left: 650px;
+    }
+
+    .img_1{
+        object-fit: cover;
+        height: 777px;
+    }
+}
