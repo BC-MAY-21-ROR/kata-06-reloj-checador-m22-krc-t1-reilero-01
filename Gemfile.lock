@@ -121,7 +121,6 @@ GEM
     faker (2.21.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
-    ffi (1.15.5-x64-mingw-ucrt)
     flay (2.13.0)
       erubi (~> 1.10)
       path_expander (~> 1.0)
@@ -195,10 +194,6 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.6-x64-mingw-ucrt)
-      racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -383,8 +378,6 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  x64-mingw-ucrt
-  x86_64-darwin-18
   x86_64-linux
 
 DEPENDENCIES
