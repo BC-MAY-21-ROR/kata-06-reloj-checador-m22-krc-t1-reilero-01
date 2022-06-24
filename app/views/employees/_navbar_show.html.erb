@@ -1,0 +1,54 @@
+<header class="header">
+  <nav class="nav-main">
+            <!--boton-->
+            <input type="checkbox" class="nav-main__btn-collapse" id="nav-main__checkbox" />
+            <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+                <span class="icon-nav"></span>
+            </label>
+            
+            <!--menu-->
+            <div class="nav-main__btn-collapse-bg"></div>
+            <div class="nav-main__menu d-flex justify-space-between">
+            <div class="pb-1">
+            <div class="text-center pb-2 ">
+              <%= link_to  "timer", root_path, class:"text-center cursor-pointer link-title" %>
+            </div>
+              <a href="" class="link-item">
+                <%= button_to image_tag('dashboard.svg')+ "Dashboard", root_path, method: :get,class:"buttonselected link-dashboard cursor-pointer d-flex gap-1 justify-space-between mb-1"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('employee.svg')+ "New Employee", new_dashboard_employee_path	, method: :get,class:"button-styles link-dashboard cursor-pointer d-flex gap-1 justify-space-between mb-1"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('department.svg')+ "Stores", new_dashboard_store_path	, method: :get,class:"button-styles link-dashboard cursor-pointer d-flex justify-space-between mb-1"%>
+              </a>
+              <a href="" class="link-item">
+                <%= button_to image_tag('log_out.svg')+ "Log out", destroy_admin_session_path, method: :delete,class:"button-styles link-dashboard cursor-pointer d-flex mb-1"%>
+              </a>
+            </div>
+            <div>
+              <div class="footer_desk__link-item mt-5">
+                 <div class="footer_desk__link-item--credits">
+                  <p class="text-center mb-1">Development by:</p>
+                  <div class="text-center">
+                    <p>Edwards Michel</p>
+                    <p>Diego Larios</p>
+                    <p>Ever Ponce</p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer_desk__link-item mb-7">
+                <%= image_tag 'BC.svg', class:"footer_desk"%>
+              </div>
+            </div>
+            </div>
+            <!--foto de perfil-->
+            <div class="profilebox">
+              <a href="" class="profilebox__link-item">
+                <%= image_tag 'admin_profile.png', class:"profile"%>
+              </a>
+            </div>
+  </nav>
+</header>

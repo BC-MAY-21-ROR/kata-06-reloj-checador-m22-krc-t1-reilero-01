@@ -1,5 +1,10 @@
-<p>Name: <%= @employee.name %></p>
-<p>Email: <%= @employee.email %></p>
-<p>Position:<%= @employee.position %></p>
-<p>P. Number: <%= @employee.private_number %></p>
-<p>Store: <%= @employee.store_id %></p>
+<%= render 'navbar_show' %>
+
+<div class="show-employee">
+  <img src=<%= @employee.avatar.url(:width=>32, :crop=>"fill") %> class="image-profile mr-1">
+  <p>Name: <%= @employee.name %></p>
+  <p>Email: <%= @employee.email %></p>
+  <p>Position:<%= @employee.position %></p>
+  <p>P. Number: <%= @employee.private_number %></p>
+  <p>Store: <%= @employee.store_id %></p>
+</div>
