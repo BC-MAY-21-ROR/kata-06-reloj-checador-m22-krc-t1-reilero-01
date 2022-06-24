@@ -1,20 +1,21 @@
-<div class="container-home">
+<div class="container-home"  data-controller="clock">
   <%= render 'navbar' %>
   <div class="container">
-    <div class="container__number">
-      <span class="number-clock" id="hour"></span>
+     <span data-clock-target="reloj" class="d-flex"></span>
+    <%# <div class="container__number">
+      <span class="number-clock" ></span>
       <p>hours</p>
     </div>
     <span class="number-colon">:</span>
     <div class="container__number">
-      <span class="number-clock" id="minutes"></span>
+      <span class="number-clock" ></span>
       <p>minutes</p>
     </div>
     <span class="number-colon">:</span>
     <div class="container__number">
-      <span class="number-clock" id="seconds"></span>
+      <span class="number-clock" ></span>
       <p>seconds</p>
-    </div>
+    </div> %>
   </div>
   <%= form_with url: "/private_number_input", method: :post do |form| %>
     <div class="d-flex fd-column form_private_number mx-auto px-1 mt-5">
@@ -54,3 +55,4 @@
     <% end %>
   <% end %>
 </div>
+
